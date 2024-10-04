@@ -109,10 +109,16 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.deepPurple, // Set button background color
+          ),
           onPressed: () => _buttonPressed(value),
           child: Text(
             value,
-            style: const TextStyle(fontSize: 24.0),
+            style: const TextStyle(
+              fontSize: 24.0,
+              color: Colors.white, // Set button text color
+            ),
           ),
         ),
       ),
@@ -134,7 +140,10 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.all(20.0),
               child: Text(
                 _displayText,
-                style: const TextStyle(fontSize: 48.0, fontWeight: FontWeight.bold),
+                style: const TextStyle(
+                  fontSize: 48.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
